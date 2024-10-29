@@ -107,13 +107,12 @@ void encode(const std::string path)
 	
 	std::ofstream outfile;
 	outfile.open(path + ".huf", std::ios::binary);
-
-	char byte = 0;
-	int bitCount = 0;
+	
 
 	for(char symbol : file)
 	{
-	
+		char byte = 0;
+		int bitCount = 0;
 		std::string converted(1, symbol);
 		for(char bits : huffmanCode[converted])
 		{
