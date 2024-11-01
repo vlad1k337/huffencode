@@ -59,9 +59,6 @@ huffmanNode* buildHuffmanTree(std::unordered_map<char, int> frequencies)
 
 		huffmanNode* newNode = huffmanNode::allocateNode(left->getSymbols() + right->getSymbols(), left->getWeight() + right->getWeight(), left, right);
 		list.push(newNode);
-
-		newNode = 0;
-		delete newNode;
 	}
 	
 	huffmanNode* rootNode = list.top();
